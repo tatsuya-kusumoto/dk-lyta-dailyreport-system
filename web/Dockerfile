@@ -1,3 +1,4 @@
+# 0. ubuntu:22.04をベースにする
 FROM ubuntu:22.04
 
 # 1. command_tutorialディレクトリをルートディレクトリに作成して
