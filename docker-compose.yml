@@ -10,8 +10,8 @@ services:
       - 80:80
       - 443:443
     links:                # このコンテナが依存するコンテナの識別名（キー）とそのエイリアス名（別名）の指定
-      - "db:ly_db_container"
-    container_name: "ly_web_container" # このコンテナの名前の指定
+      - "db:db_container"
+    container_name: "web_container" # このコンテナの名前の指定
   # MySQL用のコンテナ（dbという識別名（キー）は任意で設定したもの）
   db:
     build: ./db
@@ -20,7 +20,7 @@ services:
       - 4306:3306
     expose:               # 他のコンテナと通信できるポート番号の指定
       - 3306
-    container_name: "ly_db_container"
+    container_name: "db_container"
     volumes:              # データの永続化の設定
       - db_data:/var/lib/mysql       # ボリューム名:コンテナのディレクトリ
 
