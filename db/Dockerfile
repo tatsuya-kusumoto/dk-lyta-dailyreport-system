@@ -33,9 +33,8 @@ EXPOSE 3306
 
 # 7. 一般ユーザmyuserの作成およびmyuserでログイン
 RUN apt -y install sudo
-RUN useradd -s /bin/bash -G sudo -m myuser
-RUN echo "myuser:mypass" | chpasswd
-RUN echo "root:rootpass" | chpasswd
+RUN useradd -s /bin/bash -G sudo -m repuser
+RUN echo "repuser:reppass" | chpasswd
 
 # 8. 起動時コマンドの指定
 COPY startup.sh /startup.sh
