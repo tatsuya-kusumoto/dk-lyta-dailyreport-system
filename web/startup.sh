@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Spring Bootアプリケーションの起動
-↓のjarファイル名を修正
 java -jar /var/www/java/DailyReportSystemApplication-0.0.1-SNAPSHOT.jar &
 
 # Apache2の起動
